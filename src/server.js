@@ -1,7 +1,8 @@
 import express from "express"
+import "dotenv/config"
 
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT;
 
 app.get("/hello", ( req, res) => {
     res.json({message:"GET API is runnning "})
