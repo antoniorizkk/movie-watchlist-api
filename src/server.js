@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:true}));
 // API Routes
 app.use("/movies", moviesRouter);
 app.use("/auth", authRouter)
