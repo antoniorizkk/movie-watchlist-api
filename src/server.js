@@ -1,8 +1,11 @@
 import express from "express"
 import "dotenv/config"
+import db from "./config/db.js"
 
 // Import Routes
 import moviesRouter from "./routes/movies.routes.js"
+
+db.connectDB();
 
 const app = express();
 const PORT = process.env.PORT;
